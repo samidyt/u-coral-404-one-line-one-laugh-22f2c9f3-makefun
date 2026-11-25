@@ -10,7 +10,9 @@ helpful — until the inventory turns out to be just ice and one
 pickle, and the pickle is the confident one. The setup promises
 clever tech; the punch lands on how little there is to be clever
 about, with the absurd image of a self-assured pickle doing the
-heavy lifting.
+heavy lifting. One sentence, one scene, one turn: the fridge is
+smart, the contents are not, and the pickle has main-character
+energy.
 """
 
 import sys
@@ -25,6 +27,7 @@ def validate(line: str) -> int:
     """
     assert "\n" not in line, "entry must be exactly one line"
     assert line.strip(), "entry must not be blank"
+    assert line == line.strip(), "entry must not have leading/trailing whitespace"
     count = len(line)
     assert 1 <= count <= 200, "entry must be 1-200 characters"
     return count
